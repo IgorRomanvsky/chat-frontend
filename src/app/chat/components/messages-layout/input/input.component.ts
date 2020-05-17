@@ -31,6 +31,7 @@ export class InputComponent implements OnInit {
       receiver: this.conversationPartner._id,
       conversationId: this.conversationId,
     };
+    this.messageText = "";
     this.messageService.onSendNewMessage(message);
   }
 }

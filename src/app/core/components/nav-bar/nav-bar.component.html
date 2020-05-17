@@ -3,10 +3,12 @@
     <div class="nav-logo"></div>
 
     <ul class="menu-item">
-      <li [routerLink]="['/chat']" routerLinkActive="active" route href="">
+      <li [routerLink]="['./chat']" routerLinkActive="active" route href="">
         Chat
       </li>
-      <li [routerLink]="['/table']" routerLinkActive="active" href="">Table</li>
+      <li [routerLink]="['./table']" routerLinkActive="active" href="">
+        Table
+      </li>
     </ul>
   </div>
   <div *ngIf="currentUser" class="navbar-right">
