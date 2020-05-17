@@ -1,0 +1,18 @@
+@import "../../../../styles/vars.scss";
+
+.chat-page-container {
+  display: flex;
+  width: 100%;
+  max-height: calc(100vh - 50px);
+
+  .user-container {
+    box-shadow: $shadow-2dp;
+    width: 20%;
+    height: calc(100vh - 50px);
+  }
+
+  .message-container {
+    width: 80%;
+    height: calc(100vh - 50px);
+  }
+}

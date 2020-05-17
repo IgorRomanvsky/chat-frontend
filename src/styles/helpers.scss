@@ -1,0 +1,20 @@
+@import "./vars.scss";
+$iconRadius: 30px;
+
+// Material btn helper
+.brand-btn {
+  line-height: 27px !important;
+  background-color: $googleBlue !important;
+  color: #fff;
+  font-size: 12px;
+}
+
+.icon {
+  text-align: center;
+  line-height: $iconRadius;
+  width: $iconRadius;
+  height: $iconRadius;
+  border-radius: $iconRadius;
+  background-color: #eeee;
+  margin-right: 10px;
+}

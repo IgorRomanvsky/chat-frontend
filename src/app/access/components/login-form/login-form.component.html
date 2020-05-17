@@ -1,0 +1,18 @@
+<div class="form-container">
+  <form [formGroup]="logInForm" (ngSubmit)="onFormSubmit()">
+    <div class="form-header">
+      Welcome!
+    </div>
+
+    <div class="inputs-box">
+      <div class="single-form-input">
+        <i class="fas fa-user"></i>
+        <mat-form-field class="form-field">
+          <mat-label>Enter username</mat-label>
+          <input formControlName="userName" matInput />
+        </mat-form-field>
+        <button class="brand-btn" mat-raised-button>Login</button>
+      </div>
+    </div>
+  </form>
+</div>

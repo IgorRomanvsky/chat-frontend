@@ -1,0 +1,26 @@
+@import "../../../styles//vars.scss";
+
+.table-container {
+  width: 100%;
+  .table-header {
+    margin: 20px;
+  }
+
+  .table-action {
+    margin: 20px;
+    .action {
+      cursor: pointer;
+    }
+  }
+}
+
+table {
+  margin-top: 10px;
+  width: 95%;
+  margin: auto;
+
+  th {
+    color: #fff;
+    background-color: $googleBlue;
+  }
+}

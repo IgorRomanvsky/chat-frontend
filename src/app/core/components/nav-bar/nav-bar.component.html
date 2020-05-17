@@ -1,0 +1,15 @@
+<div class="navbar">
+  <div class="navbar-left">
+    <div class="nav-logo"></div>
+
+    <ul class="menu-item">
+      <li [routerLink]="['/chat']" routerLinkActive="active" route href="">
+        Chat
+      </li>
+      <li [routerLink]="['/table']" routerLinkActive="active" href="">Table</li>
+    </ul>
+  </div>
+  <div *ngIf="currentUser" class="navbar-right">
+    Hello! <strong>{{ currentUser.userName }}</strong>
+  </div>
+</div>

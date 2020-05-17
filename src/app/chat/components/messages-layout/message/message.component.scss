@@ -1,0 +1,39 @@
+@import "../../../../../styles/vars.scss";
+
+.message-wrapper {
+  .message {
+    .message-info {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .text {
+        max-width: 200px;
+        background-color: $googleBlue;
+        margin: 10px 50px;
+        color: #fff;
+        padding: 10px;
+        border-radius: 20px;
+        display: block;
+        word-wrap: break-word;
+      }
+
+      .icon {
+        position: absolute;
+        left: 10px;
+      }
+    }
+  }
+}
+
+.user-message {
+}
+
+.partner-message-text {
+  margin-left: auto !important;
+  margin-right: 60px !important;
+}
+.partner-message-icon {
+  left: auto !important;
+  right: 10px !important;
+}

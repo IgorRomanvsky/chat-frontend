@@ -1,0 +1,9 @@
+<div class="input-wrapper">
+  <div class="input">
+    <input [(ngModel)]="messageText" autofocus autocomplete="off" />
+  </div>
+
+  <div (click)="onSendNewMessage()" class="input-btn">
+    <i class="fas fa-paper-plane"></i>
+  </div>
+</div>

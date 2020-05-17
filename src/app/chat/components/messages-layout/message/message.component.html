@@ -1,0 +1,27 @@
+<div class="message-wrapper">
+  <div *ngFor="let message of messages; let i = index" class="message">
+    <div class="message-info">
+      <div
+        class="icon"
+        [ngClass]="{
+          'partner-message-icon': message.sender !== conversationPartner._id
+        }"
+      >
+        <span *ngIf="message.sender === conversationPartner._id">{{
+          conversationPartner.userName.slice(0, 1)
+        }}</span>
+        <span *ngIf="message.sender !== conversationPartner._id">{{
+          currentUser.userName.slice(0, 1)
+        }}</span>
+      </div>
+      <div
+        [ngClass]="{
+          'partner-message-text': message.sender !== conversationPartner._id
+        }"
+        class="text"
+      >
+        {{ message.text }}
+      </div>
+    </div>
+  </div>
+</div>

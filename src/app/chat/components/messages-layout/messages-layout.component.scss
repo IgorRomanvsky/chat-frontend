@@ -1,0 +1,10 @@
+@import "../../../../styles/vars.scss";
+.messages-container {
+  .user-messages {
+    height: calc(100vh - 115px);
+    overflow: scroll;
+  }
+
+  .input-container {
+  }
+}

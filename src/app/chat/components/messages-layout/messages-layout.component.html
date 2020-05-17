@@ -1,0 +1,14 @@
+<div class="messages-container">
+  <div #messageContainer class="user-messages">
+    <app-message
+      [conversationPartner]="conversationPartner"
+      [messages]="conversation?.messages"
+    ></app-message>
+  </div>
+  <div class="input-container">
+    <app-input
+      [conversationId]="conversation?._id"
+      [conversationPartner]="conversationPartner"
+    ></app-input>
+  </div>
+</div>

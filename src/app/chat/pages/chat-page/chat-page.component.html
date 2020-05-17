@@ -1,0 +1,13 @@
+<div class="chat-page-container">
+  <div class="user-container">
+    <app-users
+      (setCurrentConversationPartner)="updateConversationPartner($event)"
+    ></app-users>
+  </div>
+  <div class="message-container">
+    <app-messages-layout
+      [conversationPartner]="conversationPartner"
+      [conversation]="conversation"
+    ></app-messages-layout>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="user-container">
+  <div
+    *ngFor="let user of users"
+    (click)="onUserSelect(user)"
+    [ngClass]="{ activeUser: user._id === selectedUserIdToChat }"
+    class="user-item"
+  >
+    <div class="icon"><i class="far fa-user"></i></div>
+    <div class="user-name">{{ user?.userName }}</div>
+  </div>
+</div>

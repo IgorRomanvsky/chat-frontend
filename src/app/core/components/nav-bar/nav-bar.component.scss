@@ -1,0 +1,52 @@
+@import "../../../../styles/vars.scss";
+
+.navbar {
+  display: flex;
+  height: $navbarHeight;
+  background-color: $gray-more-lighter;
+  color: $gray-darker;
+  align-items: center;
+
+  .navbar-left {
+    font-size: 13px;
+    display: flex;
+    .nav-logo {
+      margin: 5px 50px 0px 5px;
+      img {
+        width: 80px;
+      }
+    }
+  }
+
+  .navbar-right {
+    margin-left: auto;
+    margin-right: 50px;
+  }
+}
+
+.menu-item {
+  margin: 5px;
+  list-style-type: none;
+  text-transform: uppercase;
+  display: flex;
+
+  li {
+    margin: 0 15px 0 15px;
+    display: inline-block;
+    transition: 0.2s color;
+    outline-color: transparent;
+    &:hover {
+      cursor: pointer;
+      color: $gray-light;
+    }
+  }
+}
+.router-link-active {
+  background-color: $gray-light;
+}
+
+li:active,
+li:focus {
+  outline: 0;
+  border: none;
+}
