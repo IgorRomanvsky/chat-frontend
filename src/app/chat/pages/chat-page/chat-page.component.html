@@ -1,6 +1,7 @@
 <div class="chat-page-container">
   <div class="user-container">
     <app-users
+      [newMessages]="newMessages"
       (setCurrentConversationPartner)="updateConversationPartner($event)"
     ></app-users>
   </div>

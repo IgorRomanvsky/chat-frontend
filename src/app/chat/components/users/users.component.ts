@@ -4,11 +4,13 @@ import {
   OnDestroy,
   Output,
   EventEmitter,
+  Input,
 } from "@angular/core";
 import { User } from "src/app/shared/types/user.type";
 import { UsersServices } from "../../services/users.service";
 import { ConversationService } from "../../services/conversations.service";
 import { Subscription } from "rxjs";
+import { Message } from "../../types/message.type";
 
 @Component({
   selector: "app-users",
@@ -16,6 +18,7 @@ import { Subscription } from "rxjs";
   styleUrls: ["./users.component.scss"],
 })
 export class UsersComponent implements OnInit, OnDestroy {
+  @Input() newMessages: Message[];
   @Output() public setCurrentConversationPartner: EventEmitter<
     User
   > = new EventEmitter<User>();
@@ -38,6 +41,11 @@ export class UsersComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.userSub.unsubscribe();
+  }
+
+  public checkHowManyNewMessagesFromUser(userId: string): number {
+    return this.newMessages.filter((msg: Message) => msg.sender === userId)
+      .length;
   }
 
   public onUserSelect(selectedUser: User): void {

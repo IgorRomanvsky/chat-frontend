@@ -1,11 +1,14 @@
 @import "../../../../styles/vars.scss";
 
+$notificationBadgeRadius: 17px;
+
 @mixin activeUser {
   background-color: $googleBlue;
   color: #fff;
 }
 
 .user-container {
+  overflow-y: scroll;
   .user-item {
     cursor: pointer;
     padding: 10px;
@@ -17,6 +20,20 @@
       @include activeUser;
     }
   }
+}
+
+.notification-icon {
+  background-color: rgb(190, 8, 8);
+  width: $notificationBadgeRadius;
+  height: $notificationBadgeRadius;
+  border-radius: $notificationBadgeRadius;
+  line-height: $notificationBadgeRadius;
+  font-size: 12px;
+  color: #fff;
+  margin-left: auto;
+  margin-right: 10px;
+  text-align: center;
+  font-weight: 700;
 }
 
 .activeUser {

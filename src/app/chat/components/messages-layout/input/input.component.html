@@ -1,6 +1,11 @@
 <div class="input-wrapper">
   <div class="input">
-    <input [(ngModel)]="messageText" autofocus autocomplete="off" />
+    <input
+      (keyup)="onInputKeyPress($event.keyCode)"
+      [(ngModel)]="messageText"
+      autofocus
+      autocomplete="off"
+    />
   </div>
 
   <div (click)="onSendNewMessage()" class="input-btn">

@@ -16,6 +16,7 @@ export class ChatPageComponent implements OnInit, OnDestroy {
   public conversationPartner: User;
   private conversationSub: Subscription;
   private newMsgSub: Subscription;
+  public newMessages: Message[] = [];
 
   constructor(
     private conversationService: ConversationService,
@@ -31,8 +32,13 @@ export class ChatPageComponent implements OnInit, OnDestroy {
 
     this.newMsgSub = this.messageService.chatMessageUpdateSub.subscribe(
       (newmsg: Message) => {
-        if (newmsg.conversationId === this.conversation._id) {
+        if (
+          this.conversation &&
+          newmsg.conversationId === this.conversation._id
+        ) {
           this.checkIfUpdateNewMessage(newmsg);
+        } else {
+          this.newMessages.push(newmsg);
         }
       }
     );
@@ -51,6 +57,13 @@ export class ChatPageComponent implements OnInit, OnDestroy {
   }
 
   public updateConversationPartner(user: User): void {
+    this.clearNewMessagesBySelectedUserToChat(user._id);
     this.conversationPartner = user;
+  }
+
+  public clearNewMessagesBySelectedUserToChat(userId: string): void {
+    this.newMessages = [
+      ...this.newMessages.filter((msg: Message) => msg.sender !== userId),
+    ];
   }
 }

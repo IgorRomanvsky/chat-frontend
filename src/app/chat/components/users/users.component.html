@@ -7,5 +7,11 @@
   >
     <div class="icon"><i class="far fa-user"></i></div>
     <div class="user-name">{{ user?.userName }}</div>
+    <div
+      *ngIf="checkHowManyNewMessagesFromUser(user?._id)"
+      class="notification-icon"
+    >
+      {{ checkHowManyNewMessagesFromUser(user?._id) }}
+    </div>
   </div>
 </div>

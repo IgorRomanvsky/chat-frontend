@@ -10,6 +10,7 @@ import { MessagesLayoutComponent } from "./components/messages-layout/messages-l
 import { MessageComponent } from "./components/messages-layout/message/message.component";
 import { UsersComponent } from "./components/users/users.component";
 import { CoreModule } from "../core/core.module";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { CoreModule } from "../core/core.module";
     ReactiveFormsModule,
     FormsModule,
     CoreModule,
+    MatSnackBarModule,
     RouterModule.forChild(ChatRoutes),
   ],
   declarations: [
